@@ -17,7 +17,7 @@ header {
   box-shadow: 6px 4px 4px rgba(0,0,0,0.2);
 }
 
-nav {
+aside {
   margin-top: 24px;
   display: table;
   width: 100%;
@@ -25,7 +25,6 @@ nav {
 
 ul {
   display: table-row;
-
 }
 
 .border-icon {
@@ -56,8 +55,12 @@ ul {
 
 li {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
   padding: 16px;
+}
+
+.text {
+  padding-top: 10px;
 }
 
 .icon {
@@ -79,12 +82,11 @@ li {
 }
 
 .badge {
-  height: 100%;
-  width: 100%;
   text-align: center;
   color: white;
   border-radius: 4px;
   padding: 10px;
+  float: right;
 }
 
 .green {
@@ -99,13 +101,6 @@ li {
   background-color: red;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
 
 .circle {
   width: 300px;
