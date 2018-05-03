@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 1px;
+  min-height: 100%;
+}
+
+body {
+  font-family:  Arial, sans-serif;
+}
+
+header {
+  width: 1170px;
+  margin: 0 auto; 
+  box-shadow: 6px 4px 4px rgba(0,0,0,0.2);
+}
+
+nav {
+  margin-top: 24px;
+  display: table;
+  width: 100%;
+}
+
+ul {
+  display: table-row;
+
+}
+
+.border-icon {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.border-text {
+  border-top: 1px solid #ccc;
+}
+
+.border-badge {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.border-icon-last {
+  border-bottom: 1px solid #ccc;
+}
+
+.border-text-last {
+  border-bottom: 1px solid #ccc;
+}
+
+.border-badge-last {
+  border-bottom: 1px solid #ccc;
+}
+
+li {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 16px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background: url("SVG-icons.png") no-repeat;
+}
+
+.icon-smile {
+  background-position: -115px -43px;
+}
+
+.icon-edit {
+  background-position: -115px -80px;
+}
+
+.icon-cat {
+  background-position: -4px -154px;
+}
+
+.badge {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.green {
+  background-color: green;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.red {
+  background-color: red;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 100px auto;
+  background: 
+  linear-gradient(63deg, #999 23%, transparent 23%) 7px 0, 
+  linear-gradient(63deg, transparent 74%, #999 78%), 
+  linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%), 
+  #444;
+  background-size: 16px 48px;
+  box-shadow: inset 0px -20px 0px rgba(100,50,50,0.3), inset -20px 0px 0px rgba(180,180,200,0.5), inset 0px 20px 0px rgba(251, 216, 3,0.5), inset 20px 0px 0px rgba(151, 116, 3,0.5);
+}

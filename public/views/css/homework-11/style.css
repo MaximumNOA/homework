@@ -1,0 +1,78 @@
+.circle-inner {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 100px;
+  border: solid transparent;
+  border-width: 0 0 0 50px;
+  border-radius: 100px;
+  outline: none;
+  overflow: hidden;
+  animation: background1 10s linear infinite;
+}
+.circle-inner:before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  height: 100px;
+  border-right: 50px solid transparent;
+  border-left: 50px solid blue;
+  border-radius: 100px;
+  animation: rotate1 10s linear infinite;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#FFA9A1, #aaa);
+  border-radius: 50%;
+  line-height: 100px;
+}
+
+@keyframes background1 {
+  49.999% {border-width: 0 0 0 50px; border-color: transparent;}
+  50%, 100% {border-width: 0 50px 0 0; border-color: blue;}
+}
+@keyframes rotate1 {
+  49.999% {left: -50px;}
+  50% {left: 0px;}
+  100% {transform: rotate(360deg); left: 0px;}
+}
+
+.loader-cirle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(#FFA9A1, #aaa);
+  border-radius: 50%;
+  line-height: 100px;
+  margin: 10px;
+}
+
+.loader-container {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  margin: 33px;
+}
+
+@keyframes load {
+  100% {
+  transform: translateY(-300px);
+  }
+}
+
+.loader:after {
+  content: "1 2 3 4 5 6 7 8 9 10";
+}
+
+.loader {
+  animation: load 10s steps(10, end) infinite;
+}

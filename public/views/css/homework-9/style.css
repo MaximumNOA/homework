@@ -1,0 +1,74 @@
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  padding: 30px;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+}
+
+.purple {
+  background-color: #8E44AD;
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin: 0 5px 5px 0;
+}
+
+.yellow {
+  background-color: #F1C40F;
+  width: 70px;
+  height: 70px;
+  margin: 0 5px 5px 0;
+  float: right;
+}
+
+.blue {
+  background-color: #3498DB;
+  width: 70px;
+  height: 220px;
+  margin: 0 5px 5px 0;
+  float: left;
+}
+
+.blue-long {
+  background-color: #3498DB;
+  width: 220px;
+  height: 70px;
+  margin: 0 5px 5px 0;
+  float: left;
+}
+
+.green {
+  background-color: green;
+  width: 145px;
+  height: 70px;
+  margin: 0 5px 5px 0;
+  float: left;
+}
+
+.green-right {
+  background-color: green;
+  width: 145px;
+  height: 70px;
+  margin: 0 5px 5px 0;
+  float: right;
+}
+
+.red {
+  background-color: #E74C3C;
+  width: 70px;
+  height: 145px;
+  margin: 0 5px 5px 0;
+  float: right;
+}
+
+.red-left {
+  background-color: #E74C3C;
+  width: 70px;
+  height: 145px;
+  margin: 0 5px 5px 0;
+  float: left;
+}

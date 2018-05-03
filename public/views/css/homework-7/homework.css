@@ -1,0 +1,141 @@
+html {
+  height: 1px;
+  min-height: 100%;
+}
+
+body {
+  height: 1px;
+  min-height: 100%;
+  color: #444;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 1px;
+  min-height: 100%;
+}
+
+.main, main {
+  flex: 1 0 auto;
+}
+
+/* unknown props */
+/* пример фонового цвета - background-color: #3F51B5; */
+/* тень блока - box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2); */
+/* закругленные углы у кнопок - border-radius: 3px; */
+
+/* Your styles go below */
+* {
+  box-sizing: border-box;
+}
+.header {
+  background-color: #3F51B5;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+}
+.nav {
+  color: #fff;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+}
+.nav__link {
+  padding-right: 10px;
+}
+.nav__link-active {
+  text-decoration: underline;
+}
+.container {
+  margin: 0 auto;
+  width: 1170px;
+}
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  padding: 100px 0 30px 0;
+}
+.row {
+  font-size: 0;
+  margin: 0 -15px;
+}
+.column {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.33333%;
+  padding: 0 15px;
+}
+.card {
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+.card__img {
+  width: 100%;
+  position: relative;
+}
+.favorites {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+.card__img img {
+  width: 100%;
+  max-height: 100%;
+}
+.card__info {
+  padding: 24px 12px;
+}
+.card__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.card__desc {
+  line-height: normal;
+  font-size: 16px;
+}
+.button {
+  background-color: #3F51B5;
+  border-radius: 3px;
+  display: block;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 10px;
+}
+.button:hover {
+  background-color: #4c60d3;
+}
+.button:active {
+  background-color: #344396;
+}
+.page__links {
+  text-align: center;
+  padding: 30px 0;
+}
+.page__links a {
+  padding: 0 10px;
+}
+.underline {
+  text-decoration: underline;
+}
+.footer {
+  background-color: #3F51B5;
+  color: #fff;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
