@@ -22,5 +22,5 @@ var userName = 'Петя';
 
 var fps;
 var blank;
-var viewDocumnet;
+var modeViewDocumnet;
 var needViewLastPageNavigation;
