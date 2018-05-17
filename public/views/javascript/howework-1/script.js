@@ -21,6 +21,6 @@ var userName = 'Петя';
 // необходимость показа последней страницы постраничной навигации.
 
 var fps;
-var blank;
-var modeViewDocumnet;
-var needViewLastPageNavigation;
+var anything;
+var documentViewMode;
+var showLastNavPage;
