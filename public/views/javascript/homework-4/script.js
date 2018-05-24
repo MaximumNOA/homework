@@ -268,36 +268,37 @@
 // }
 
 //Version 2 не важно не проверть :) 
-// var x = prompt('Введите х', '');
-// var n = prompt('Введите в какую степень возвести Х', '');
+var x = prompt('Введите х', '');
+var n = prompt('Введите в какую степень возвести Х', '');
 
-// function pow() {
-//   var i, result;
-//   result = x;
+function pow() {
+  var i, result;
+  result = x;
 
-//   for (i = 1; i < n; i+=1 ) {
-//     result *= x;
-//   }
-//   return result;
-// }
+  for (i = 1; i < n; i+=1 ) {
+    result *= x;
+  }
+  return result;
+}
 
-// function minePow() {
-//   var i, result, b;
-//   result = x;
-//   for (i = 0; i >= n; i+=1 ) {
-//     result *= x;
-//   }
-//   b = 1 / (result);
-//   return b;
-// }
+function minePow() {
+  var i, result, b;
+  result = x;
+  n = -n;
+  for (i = 1; i < n; i+=1 ) {
+    result *= x;
+  }
+  b = 1 / (result);
+  return b;
+}
 
  
-// if (n < 1) {
-//   console.log(minePow(x, n)); // работает не корректно
-//   // console.log(x ** n); // работает как надо но это чит
-// } else {
-//   console.log(pow(x, n));
-// }
+if (n < 1) {
+  console.log(minePow(x, n)); // работает не корректно
+  // console.log(x ** n); // работает как надо но это чит
+} else {
+  console.log(pow(x, n));
+}
 
 //task 14
 // "" + 1 + 0 - вернет строку '10'
