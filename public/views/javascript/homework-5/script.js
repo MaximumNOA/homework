@@ -170,63 +170,18 @@
 
 //task 12/13 Случайное из интервала (min, max)
 
-// function random() {
-//   var numMin = +prompt('начало диапазона', '');
-//   var numMax = +prompt('конец диапазона', '');
-//   var a = parseInt (Math.random() * numMax);
-  
-//   if ( a > numMin) {
-//     console.log(a);
-//   }
-// }
-
-// random();
-
-
-
 function random(min, max) {
-  var a = parseInt (Math.random() * max + 1);
-  
-  if ( a >= min) {
+  var a = parseInt (Math.random() * (max + 1 - min) );
 
-    return a;
-  } else {
-
-    random(min, max);
-  }
-
+  return a += min;
 }
 
-console.log( random(5, 10) );
-
-// function randomInteger(min, max) {
-//   var rand = min + Math.random() * (max + 1 - min);
-//   rand = Math.floor(rand);
-//   return rand;
-// }
-
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-// console.log( randomInteger(5, 10) );
-
-
-console.log( random(5, 10) );
-console.log( random(5, 10) );
-console.log( random(5, 10) );
-console.log( random(5, 10) );
-console.log( random(5, 10) );
-console.log( random(5, 10) );
-console.log( random(5, 10) );
-console.log( random(5, 10) );
-console.log( random(5, 10) );
-console.log( random(5, 10) );
-console.log( random(5, 10) );
+console.log( random(6, 10) );
+console.log( random(6, 10) );
+console.log( random(6, 10) );
+console.log( random(6, 10) );
+console.log( random(6, 10) );
+console.log( random(6, 10) );
+console.log( random(6, 10) );
+console.log( random(6, 10) );
+console.log( random(7, 10) );
