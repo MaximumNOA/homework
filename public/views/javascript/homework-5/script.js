@@ -68,7 +68,7 @@
 // var n = +prompt('введите N', '');
 
 // function fib(n) {
-//   var i, a, b;
+//   var i, a, b, c;
 //   a = 1;
 //   b = 1;
 //   i = 3; // самое сложное было вычислить 
@@ -105,7 +105,128 @@
 // alert(g)
 //g is not defined т.к. g это имя функции внутри скобок то оно там и остается 
 
-//task 5
-var hello = "Привет";
+//task 5 Интерфейс суммы
 
-console.log( hello.toUpperCase );
+// function sum(a, b, c) {
+//   a = +prompt('введите 1ое значение', '');
+//   b = +prompt('введите 2ое значение', '');
+
+//   c = a + b;
+//   alert('Сумма ' + c);
+// }
+
+// sum();
+
+//task 6 Почему 6.35.toFixed(1) == 6.3?
+//Из-за хранения чисел в 64 битах, и не возможности хранить дробные числа корректно 
+
+//task 7 Сложение цен
+
+//да бы избежать проблемы с проблемой округления чисел нужно число *10(в степени) затем /10(в степени) из задания a + b 
+// (a*10)/10 + (b*10)/10 = точный результат. При этом 10 в степени будет определять кол-ви знаков после "."
+
+//task 8 Бесконечный цикл по ошибке
+//Из-за не точности хранимых дробных чисел таки как 0.2 шаг, высокая веротность того, что в цикле мы не попадет точно на 10ку,
+// а получим что-то рода 10.00000003
+
+
+//task 9 Как получить дробную часть числа?
+
+// function getDecimal(num) {
+//   var numInt, numDecimal, a;
+//   numInt = ( parseInt(num) );
+//   numDecimal = num - numInt;
+
+//   return Math.round(numDecimal * 10000) / 10000;
+// }
+
+// alert( getDecimal(12.345) ); 
+// alert( getDecimal(1.2) ); 
+// alert( getDecimal(-1.2) ); 
+
+//task 10 Формула Бине
+
+// тут я завис
+
+//task 11 Случайное из интервала (0, max)
+
+// function random() {
+//   var num = +prompt('введите число', '');
+//   console.log(parseInt (Math.random() * num));
+// }
+
+// random();
+
+
+//version 2
+// function random(n) {
+//   console.log(parseInt (Math.random() * n));
+// }
+
+// random(100);
+// random(50);
+// random(8);
+// random(15);
+
+//task 12/13 Случайное из интервала (min, max)
+
+// function random() {
+//   var numMin = +prompt('начало диапазона', '');
+//   var numMax = +prompt('конец диапазона', '');
+//   var a = parseInt (Math.random() * numMax);
+  
+//   if ( a > numMin) {
+//     console.log(a);
+//   }
+// }
+
+// random();
+
+
+
+function random(min, max) {
+  var a = parseInt (Math.random() * max + 1);
+  
+  if ( a >= min) {
+
+    return a;
+  } else {
+
+    random(min, max);
+  }
+
+}
+
+console.log( random(5, 10) );
+
+// function randomInteger(min, max) {
+//   var rand = min + Math.random() * (max + 1 - min);
+//   rand = Math.floor(rand);
+//   return rand;
+// }
+
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+// console.log( randomInteger(5, 10) );
+
+
+console.log( random(5, 10) );
+console.log( random(5, 10) );
+console.log( random(5, 10) );
+console.log( random(5, 10) );
+console.log( random(5, 10) );
+console.log( random(5, 10) );
+console.log( random(5, 10) );
+console.log( random(5, 10) );
+console.log( random(5, 10) );
+console.log( random(5, 10) );
+console.log( random(5, 10) );
