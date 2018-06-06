@@ -1,9 +1,10 @@
+'use strict';
 //task 1
 //C Использованием цикла
-// (function (){
+// (function () {
 //   var n = +prompt('введите прогрессию N цикл', '');
 
-// function sumTo(n) {
+// function sumTo (n) {
 //   var i, sum;
 //   sum = 0;
 
@@ -13,21 +14,21 @@
 
 //   return sum;
 // }
-
 // console.log( sumTo(n) ); 
 // }());
 
-//Через рекурсию не сделал
+//Через рекурсию
 
-// function sumTo(n) {
-//   var sum = 50;
-
-//   if (n === 1) {
-//     return sum = n + sumTo(n-1);
+// function sumTo (n) {
+//   if (n > 1) {
+//     return n + sumTo(n - 1);
 //   }
-//   return 1;
+//   else {
+//     return 1;
+//   }
 // }
 
+// console.log( sumTo(1) ); 
 // console.log( sumTo(100) ); 
 
 // Можно ли при помощи рекурсии посчитать sumTo(100000)? Если нет, то почему? 
@@ -41,7 +42,7 @@
 
 // var n = +prompt('введите прогрессию N цикл', '');
 
-// function factorial(n) {
+// function factorial (n) {
 //   var i, fact;
 //   fact = 1;
 
@@ -57,7 +58,7 @@
 //Рекурсией
 // var n = +prompt('введите N', '');
 
-//  function factorial(n) {
+//  function factorial (n) {
 //   return n ? n * factorial(n - 1) : 1;
 // }
 // console.log( factorial(n) );
@@ -67,7 +68,7 @@
 
 // var n = +prompt('введите N', '');
 
-// function fib(n) {
+// function fib (n) {
 //   var i, a, b, c;
 //   a = 1;
 //   b = 1;
@@ -107,7 +108,7 @@
 
 //task 5 Интерфейс суммы
 
-// function sum(a, b, c) {
+// function sum (a, b, c) {
 //   a = +prompt('введите 1ое значение', '');
 //   b = +prompt('введите 2ое значение', '');
 
@@ -126,13 +127,13 @@
 // (a*10)/10 + (b*10)/10 = точный результат. При этом 10 в степени будет определять кол-ви знаков после "."
 
 //task 8 Бесконечный цикл по ошибке
-//Из-за не точности хранимых дробных чисел таки как 0.2 шаг, высокая веротность того, что в цикле мы не попадет точно на 10ку,
+//Из-за не точности хранимых дробных чисел как 0.2 шаг, высокая веротность того, что в цикле мы не попадет точно на 10ку,
 // а получим что-то рода 10.00000003
 
 
 //task 9 Как получить дробную часть числа?
 
-// function getDecimal(num) {
+// function getDecimal (num) {
 //   var numInt, numDecimal, a;
 //   numInt = ( parseInt(num) );
 //   numDecimal = num - numInt;
@@ -146,20 +147,31 @@
 
 //task 10 Формула Бине
 
-// тут я завис
+// function fibBinet (n) {
+//   var f = (1 + Math.sqrt(5)) / 2;
+//   return console.log( Math.round(Math.pow(f, n) / Math.sqrt(5) ));
+// }
+
+// fibBinet(77);
 
 //task 11 Случайное из интервала (0, max)
 
-// function random() {
-//   var num = +prompt('введите число', '');
-//   console.log(parseInt (Math.random() * num));
+//version 1
+// function random (min, max) {
+//   var a = parseInt (Math.random() * max + 1);
+  
+//   if ( a >= min) {
+
+//     return a;
+//   } else {
+
+//   return  random(min, max);
+//   }
+
 // }
 
-// random();
-
-
 //version 2
-// function random(n) {
+// function random (n) {
 //   console.log(parseInt (Math.random() * n));
 // }
 
@@ -170,18 +182,11 @@
 
 //task 12/13 Случайное из интервала (min, max)
 
-function random(min, max) {
-  var a = parseInt (Math.random() * (max + 1 - min) );
+// function random (min, max) {
+//   var a = parseInt (Math.random() * (max + 1 - min) );
 
-  return a += min;
-}
+//   return a += min;
+// }
 
-console.log( random(6, 10) );
-console.log( random(6, 10) );
-console.log( random(6, 10) );
-console.log( random(6, 10) );
-console.log( random(6, 10) );
-console.log( random(6, 10) );
-console.log( random(6, 10) );
-console.log( random(6, 10) );
-console.log( random(7, 10) );
+// console.log( random(6, 105) );
+// console.log( random(7, 105) );
