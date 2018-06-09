@@ -14,7 +14,7 @@
 
 //   return sum;
 // }
-// console.log( sumTo(n) ); 
+// console.log(sumTo(n)); 
 // }());
 
 //Через рекурсию
@@ -22,14 +22,13 @@
 // function sumTo (n) {
 //   if (n > 1) {
 //     return n + sumTo(n - 1);
-//   }
-//   else {
+//   } else {
 //     return 1;
 //   }
 // }
 
-// console.log( sumTo(1) ); 
-// console.log( sumTo(100) ); 
+// console.log(sumTo(1)); 
+// console.log(sumTo(100)); 
 
 // Можно ли при помощи рекурсии посчитать sumTo(100000)? Если нет, то почему? 
 // Нет т.к. есть ограничение на кол-во вызово call steck в интерпритаторе
@@ -53,7 +52,7 @@
 
 //   return fact;  
 // }
-// console.log( factorial(n) );
+// console.log(factorial(n));
 
 //Рекурсией
 // var n = +prompt('введите N', '');
@@ -61,7 +60,7 @@
 //  function factorial (n) {
 //   return n ? n * factorial(n - 1) : 1;
 // }
-// console.log( factorial(n) );
+// console.log(factorial(n));
 
 //task 3
 // // Числа Фибоначчи
@@ -83,7 +82,13 @@
 //   return b;
 // }
 
-// console.log( fib(n) );
+// console.log(fib(n));
+
+// function fib (n) {
+//   return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+// }
+
+// console.log(fib(77)); 
 
 // //логика присвоения как-то так выглядит, благоадря циклу новые переменные не нужны
 // // a b c 
@@ -108,9 +113,10 @@
 
 //task 5 Интерфейс суммы
 
-// function sum (a, b, c) {
-//   a = +prompt('введите 1ое значение', '');
-//   b = +prompt('введите 2ое значение', '');
+// function sum () {
+//   var c;
+//   var a = +prompt('введите 1ое значение', '');
+//   var b = +prompt('введите 2ое значение', '');
 
 //   c = a + b;
 //   alert('Сумма ' + c);
@@ -123,8 +129,8 @@
 
 //task 7 Сложение цен
 
-//да бы избежать проблемы с проблемой округления чисел нужно число *10(в степени) затем /10(в степени) из задания a + b 
-// (a*10)/10 + (b*10)/10 = точный результат. При этом 10 в степени будет определять кол-ви знаков после "."
+//да бы избежать проблемы с проблемой округления чисел нужно число ((0.1 * 10 + 0.2 * 10) / 10)
+//((a*10+b*10)/10) логика такая, что сперва приводится к целым числам слаживается и обратно к дроби.
 
 //task 8 Бесконечный цикл по ошибке
 //Из-за не точности хранимых дробных чисел как 0.2 шаг, высокая веротность того, что в цикле мы не попадет точно на 10ку,
@@ -134,22 +140,22 @@
 //task 9 Как получить дробную часть числа?
 
 // function getDecimal (num) {
-//   var numInt, numDecimal, a;
-//   numInt = ( parseInt(num) );
+//   var numInt, numDecimal;
+//   numInt = (parseInt(num));
 //   numDecimal = num - numInt;
 
 //   return Math.round(numDecimal * 10000) / 10000;
 // }
 
-// alert( getDecimal(12.345) ); 
-// alert( getDecimal(1.2) ); 
-// alert( getDecimal(-1.2) ); 
+// console.log(getDecimal(12.345)); 
+// console.log(getDecimal(1.2)); 
+// console.log(getDecimal(-1.2)); 
 
 //task 10 Формула Бине
 
 // function fibBinet (n) {
 //   var f = (1 + Math.sqrt(5)) / 2;
-//   return console.log( Math.round(Math.pow(f, n) / Math.sqrt(5) ));
+//   return console.log(Math.round(Math.pow(f, n) / Math.sqrt(5)));
 // }
 
 // fibBinet(77);
@@ -158,9 +164,9 @@
 
 //version 1
 // function random (min, max) {
-//   var a = parseInt (Math.random() * max + 1);
+//   var a = parseInt (Math.random() * max);
   
-//   if ( a >= min) {
+//   if (a >= min) {
 
 //     return a;
 //   } else {
@@ -169,6 +175,11 @@
 //   }
 
 // }
+
+
+// console.log(random(0, 2));
+// console.log(random(7, 105));
+
 
 //version 2
 // function random (n) {
@@ -180,13 +191,23 @@
 // random(8);
 // random(15);
 
-//task 12/13 Случайное из интервала (min, max)
+//task 12 Случайное из интервала (min, max)
+// function random (min, max) {
+//   var a = (Math.random() * (max  - min);
 
+//   return a += min;
+// }
+
+// console.log(random(6, 105));
+// console.log(random(7, 105));
+
+
+//task 13
 // function random (min, max) {
 //   var a = parseInt (Math.random() * (max + 1 - min) );
 
 //   return a += min;
 // }
 
-// console.log( random(6, 105) );
-// console.log( random(7, 105) );
+// console.log(random(6, 105));
+// console.log(random(7, 105));
