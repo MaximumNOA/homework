@@ -71,7 +71,20 @@
 
 //   return reverseStr;
 // }
-// console.log( reverseStr('Some string') ); // -> 'gnirts emoS'
+// console.log(reverseStr('Some string')); // -> 'gnirts emoS'
+
+//Versin While
+// function reverseStr (str) {
+//   var i = str.length - 1;
+//   var reverseStr = '';
+//   while (i >= 0) {
+//     reverseStr += str[i];
+//     i -= 1;
+//   }
+//   return console.log(reverseStr);
+// }
+
+// reverseStr('Some string');
 
 //task 6 Compare two objects
 
@@ -152,41 +165,43 @@
 
 // drawnAnArea(8);
 
-function comparison (a, b) {
-  if (a.length !== b.length) {
-    return false;
-  }
 
-  var pos = 0;
-  while (true) {
-    var foundPos = a.indexOf(b, pos);
-    if (foundPos == -1) break;
+//Работает только по 1ом символу, сравнивает кол-во их в 1-2 строках. 
+// function comparison (a, b) {
+//   var countA = 0;
+//   var countB = 0;
+//   var i = 0;
+//   var j = 0;
+//   var pos = a.indexOf(a[i]);
+//   var posB = b.indexOf(a[i]);
 
-    console.log(foundPos);
-    pos = foundPos + 1;
-  }
 
-  // for (var i = 0; i < a.length; i += 1) {
-  //   if (~b.indexOf(a[i])) {
-  //     for (var j = 0; j < a.length; j += 1)
-  //       ~a.indexOf(b[j]);
-  //     return 'совпали';
-  //   }
-  //   return 'adfsd';
-  // }
+//   if (a.length !== b.length) {
+//     return false;
+//   }
 
-}
+//   for (;i < a.length; i += 1) {
+//     while (pos !== -1) {
+//       countA += 1;
+//       pos = a.indexOf(a[i], pos + 1);
+//     } 
+//     while (posB !== -1) {
+//       countB += 1;
+//       posB = b.indexOf(a[i], posB + 1);
+//     }
+//     console.log(countA);
+//     console.log(countB);
+//     if (countA === countB) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
 
-console.log(comparison('clock', 'lockc'));
-console.log(comparison('tree', 'three')); 
-console.log(comparison('mttudd', 'yytmtd'));
-console.log(comparison('muuuid', 'dduidd'));
 
-// var pos = 0;
-// while (true) {
-//   var foundPos = str.indexOf(target, pos);
-//   if (foundPos == -1) break;
-
-//   alert( foundPos ); // нашли на этой позиции
-//   pos = foundPos + 1; // продолжить поиск со следующей
 // }
+// console.log(comparison('clock', 'lockc'));
+// console.log(comparison('tree', 'three')); 
+// console.log(comparison('mtymdd', 'dutmmd'));
+// console.log(comparison('muuuid', 'ddumud'));
+
