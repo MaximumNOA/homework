@@ -86,3 +86,107 @@
 // }());
 
 //task 7 Draw an area
+//Version not 12345678
+// function drawnAnArea (n) {
+//   var symbolBorder = ' @ ';
+//   var symbolBody = ' - ';
+//   var i, j, k;
+//   var a = ' ';
+  
+
+
+//   for (i = 0; i < n; i += 1) {
+//     var str = '';
+//     var strBody = '';
+
+//     // если это первая линия или последняя
+//     if (i == 0 || i == n - 1) {
+//       for (j = 0; j < n; j += 1) {
+//         str += symbolBorder;
+//       } 
+//     // если это ряд в середине 
+//     } else {
+//       strBody = symbolBorder;
+//       for (k = 0; k < n - 2 ; k += 1) {
+//         strBody += symbolBody;
+//       }    
+//       strBody += symbolBorder;
+//       a += ' ';
+//       console.log(strBody + a);
+//       continue;
+//     }
+
+//   console.log(str);
+//   }
+// }
+
+// drawnAnArea(8);
+
+//Version 01234567
+// function drawnAnArea (n) {
+//   var symbolBorder = ' @ ';
+//   var symbolBody = ' - ';
+//   var i, j, k;
+
+//   for (i = 0; i < n; i += 1) {
+//     var str = '';
+//     var strBody = '';
+
+//     // если это первая линия или последняя
+//     if (i == 0 || i == n - 1) {
+//       for (j = 0; j < n; j += 1) {
+//         str += symbolBorder;
+//       } 
+//     // если это ряд в середине 
+//     } else {
+//       for (k = 0; k < n - 2 ; k += 1) {
+//         strBody += symbolBody;
+//       }    
+//       console.log(i + symbolBorder + strBody + symbolBorder);
+//       continue;
+//     }
+
+//   console.log(i + str);
+//   }
+// }
+
+// drawnAnArea(8);
+
+function comparison (a, b) {
+  if (a.length !== b.length) {
+    return false;
+  }
+
+  var pos = 0;
+  while (true) {
+    var foundPos = a.indexOf(b, pos);
+    if (foundPos == -1) break;
+
+    console.log(foundPos);
+    pos = foundPos + 1;
+  }
+
+  // for (var i = 0; i < a.length; i += 1) {
+  //   if (~b.indexOf(a[i])) {
+  //     for (var j = 0; j < a.length; j += 1)
+  //       ~a.indexOf(b[j]);
+  //     return 'совпали';
+  //   }
+  //   return 'adfsd';
+  // }
+
+}
+
+console.log(comparison('clock', 'lockc'));
+console.log(comparison('tree', 'three')); 
+console.log(comparison('mttudd', 'yytmtd'));
+console.log(comparison('muuuid', 'dduidd'));
+
+// var pos = 0;
+// while (true) {
+//   var foundPos = str.indexOf(target, pos);
+//   if (foundPos == -1) break;
+
+//   alert( foundPos ); // нашли на этой позиции
+//   pos = foundPos + 1; // продолжить поиск со следующей
+// }
