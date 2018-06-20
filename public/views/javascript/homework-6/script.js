@@ -63,15 +63,34 @@
 // function reverseStr (str) {
 //   var i;
 //   var reverseStr = '';
-
 //   for (i = str.length - 1; i >= 0; i -= 1) {
-
 //     reverseStr += str[i];
 //   }
-
 //   return reverseStr;
 // }
 // console.log(reverseStr('Some string')); // -> 'gnirts emoS'
+
+function reverseStr (str) {
+  var i = str.length - 1;
+  var rStr = '';
+  if (i >= 0) {
+    rStr += str[i];
+    i -= 1;
+  } 
+  return rStr;
+}
+
+
+
+// function reverseStr (str) {
+//   var i = str.length - 1;
+//   var rStr = '';
+
+//   return rStr = (i >= 0) ? reverseStr(str.length - 1)  : 'end';
+  
+// }
+console.log(reverseStr('Some string')); // -> 'gnirts emoS'
+// reverseStr('Some string');
 
 //Versin While
 // function reverseStr (str) {
@@ -170,12 +189,14 @@
 // function comparison (a, b) {
 //   var countA = 0;
 //   var countB = 0;
+//   var countC = 0;
 //   var i = 0;
 //   var j = 0;
-//   var pos = a.indexOf(a[i]);
-//   var posB = b.indexOf(a[i]);
+//   var pos = a.indexOf(a.charAt(1));
+//   var posB = b.indexOf(a.charAt(1));
 
 
+// debugger;
 //   if (a.length !== b.length) {
 //     return false;
 //   }
@@ -189,19 +210,39 @@
 //       countB += 1;
 //       posB = b.indexOf(a[i], posB + 1);
 //     }
-//     console.log(countA);
-//     console.log(countB);
+//      console.log(countA);
+//       console.log(countB);
 //     if (countA === countB) {
+//       // j += 1;
+//       // comparison();
 //       return true;
 //     } else {
 //       return false;
 //     }
 //   }
-
-
 // }
-// console.log(comparison('clock', 'lockc'));
+
+// // function сomparison (textOne, textTwo) {
+//   if (textOne.length === textTwo.length) {
+//     for (var i = 0; i < textOne.length; i += 1) {
+//       var flag = false;
+//       for (var j = 0; j < textTwo.length; j += 1) {
+//         if (textOne.charAt(i) === textTwo.charAt(j)) {
+//           flag = true;
+//         }
+//       }
+//       if (flag === false) {
+//         return false;
+//       }
+//     } 
+//     return true;
+
+//   } else {
+//    return false;
+//   }
+// }
+// console.log(comparison('cclock', 'lcockc'));
 // console.log(comparison('tree', 'three')); 
-// console.log(comparison('mtymdd', 'dutmmd'));
-// console.log(comparison('muuuid', 'ddumud'));
+// console.log(comparison('mtumdd', 'dutmmd'));
+// console.log(comparison('mttudd', 'duumtd'));
 
